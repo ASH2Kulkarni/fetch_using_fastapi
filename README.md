@@ -17,3 +17,15 @@ langchain_huggingface for generating text embeddings.
 langchain_chroma for storing and retrieving document embeddings.
 
 you can change the url and query in request.py according to your needs and also the class you want to fetch data from in FASTAPI.py
+To run the FastAPI application, you need to use uvicorn. In the terminal or command prompt, navigate to the directory where your main.py file is located and run:uvicorn main:app --reload
+
+Access the API
+Once the server is running, you can access the API at http://127.0.0.1:8000. You can use tools like Postman, curl, or even a web browser to interact with your API.
+
+Using curl
+Open a terminal and run:
+curl -X POST "http://127.0.0.1:8000/query" -H "Content-Type: application/json" -d '{
+    "url": "https://example.com",
+    "query": "your query here"
+}'
+Replace "https://example.com" with the URL you want to load and "your query here" with your query string.
